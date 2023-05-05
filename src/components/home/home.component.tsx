@@ -1,9 +1,11 @@
 import { Button, TextField } from "@mui/material"
 import React, { FC, SyntheticEvent, useEffect, useState } from "react"
-import { userStore } from "../../stores/user-store/user-store"
+import { useNavigate } from "react-router-dom"
+import { resumeStore } from "../../stores/user-store/resume-store"
 import "./home.styles.scss"
 
 export const Home: FC = () => {
+  const navigate = useNavigate()
   const [formInput, setFormInput] = useState("")
   useEffect(() => {
     //userStore.fetchUser()
@@ -14,8 +16,8 @@ export const Home: FC = () => {
   }
 
   const handleSubmit = async (event: SyntheticEvent) => {
-    event.preventDefault()
-    userStore.fetchUser()
+    resumeStore.fetchUser(formInput)
+    navigate(`/${formInput}`)
   }
   return <div className="container">
     <div className="content">
@@ -29,7 +31,6 @@ export const Home: FC = () => {
           <form className="main__controls--form" onSubmit={handleSubmit}>
             <TextField
               id="margin-normal"
-              name="username"
               placeholder="Enter your GitHub username and click on generate"
               size="small"
               onChange={handleInput}
