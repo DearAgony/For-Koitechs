@@ -1,0 +1,47 @@
+@import "../../styles/constants.scss";
+
+.container {
+  display: flex;
+  margin: auto;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  max-width: 1300px;
+}
+
+.header {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  h1 {
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.main__info {
+  max-width: 750px;
+}
+
+.main__interests {
+  max-width: 750px;
+  h2 {
+    font-weight: 400;
+  }
+}
+
+.footer {
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 12px;
+  padding: 7px 0px;
+}
+
+.main__controls--form {
+  display: flex;
+  gap: 20px;
+}
