@@ -7,7 +7,7 @@ import { Rep, User } from './resume-types';
 class ResumeStore {
   private _user: User | null = null
   private _languages: Record<string, number> = {}
-  private _loading: boolean = true
+  private _loading: boolean = false
   private _error: boolean = false
   private _repos: Rep[] = []
 
@@ -89,6 +89,10 @@ class ResumeStore {
     } finally {
       this.setLoading(false)
     }
+  }
+
+  clearData = () => {
+    this.setUserData(null)
   }
 }
 
