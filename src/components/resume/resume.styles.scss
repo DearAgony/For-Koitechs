@@ -8,8 +8,8 @@
   letter-spacing: 3px;
   h1 {
     font-weight: 400;
+    padding: 0px 50px 20px 50px;
     border-bottom: 1px solid #ccc;
-    padding-bottom: 0;
     margin-bottom: 0;
   }
 }
@@ -22,4 +22,20 @@
   div.first {
     width: 13%;
   }
+  p:first-child {
+    margin-top: 0;
+  }
+  @media (max-width: 1024px) {
+    padding: 10px 20px;
+  }
+}
+
+.emptyBlock {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 700px;
+  width: 500px;
+  text-align: center;
+  flex-direction: column;
 }

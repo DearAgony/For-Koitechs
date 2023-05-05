@@ -7,16 +7,13 @@ import "./home.styles.scss"
 export const Home: FC = () => {
   const navigate = useNavigate()
   const [formInput, setFormInput] = useState("")
-  useEffect(() => {
-    //userStore.fetchUser()
-  }, [])
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const name = e.target.value;
     setFormInput(name)
   }
 
   const handleSubmit = async (event: SyntheticEvent) => {
-    resumeStore.fetchUser(formInput)
+    resumeStore.clearData()
     navigate(`/${formInput}`)
   }
   return <div className="container">
