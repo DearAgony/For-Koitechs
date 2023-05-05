@@ -10,7 +10,7 @@ export const App: React.FC = () => (
     <Router>
       <Routes>
         <Route path={ROOT_PAGE} element={<Home />}/>
-        <Route path={RESUME_PAGE} element={<p>Test</p>}/>
+        <Route path={RESUME_PAGE} element={<Resume />}/>
       </Routes>
     </Router>
   </div>
