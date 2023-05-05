@@ -10,3 +10,9 @@ export interface User {
 export interface Repos {
   language: string
 }
+
+export interface Rep {
+  name: string,
+  updated_at: number,
+  html_url: string
+}
