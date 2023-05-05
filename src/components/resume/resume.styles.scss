@@ -1,0 +1,25 @@
+.container {
+  // width: 1300px;
+}
+
+.resume__header {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  h1 {
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.resume_main--wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 20px 50px;
+  border-bottom: 1px solid #ccc;
+  div.first {
+    width: 13%;
+  }
+}
